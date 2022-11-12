@@ -6,9 +6,12 @@ function themeToggler(){
     var grid_items = document.getElementsByClassName('grid-item');
     var follow_count = document.getElementsByClassName('follower-count');
     var item_count = document.getElementsByClassName('count');
-    console.log(follow_count)
     if(light_mode){
-        document.body.style.backgroundImage = 'linear-gradient(to bottom,hsl(232, 19%, 15%) 0%,hsl(232, 19%, 15%) 30%,hsl(230, 17%, 14%) 30%,hsl(230, 17%, 14%) 100%)'
+        if(window.innerWidth <= 376){
+            document.body.style.backgroundImage = 'linear-gradient(to bottom,hsl(232, 19%, 15%) 0%,hsl(232, 19%, 15%) 10%,hsl(230, 17%, 14%) 10%,hsl(230, 17%, 14%) 100%)'
+        }else{
+            document.body.style.backgroundImage = 'linear-gradient(to bottom,hsl(232, 19%, 15%) 0%,hsl(232, 19%, 15%) 30%,hsl(230, 17%, 14%) 30%,hsl(230, 17%, 14%) 100%)'
+        }
         main_head.style.color = 'hsl(0, 0%, 100%)'
         overview.style.color = 'hsl(0, 0%, 100%)'
         for(var i=0;i<blocks.length;i++){
@@ -32,7 +35,11 @@ function themeToggler(){
         }
         light_mode = !light_mode
     }else{
-        document.body.style.backgroundImage = 'linear-gradient(to bottom,hsl(225, 100%, 98%) 0%,hsl(225, 100%, 98%) 30%,white 30%,white 100%)'
+        if(window.innerWidth <= 376){
+            document.body.style.backgroundImage = 'linear-gradient(to bottom,hsl(225, 100%, 98%) 0%,hsl(225, 100%, 98%) 10%,white 10%,white 100%)'
+        }else{
+            document.body.style.backgroundImage = 'linear-gradient(to bottom,hsl(225, 100%, 98%) 0%,hsl(225, 100%, 98%) 30%,white 30%,white 100%)'
+        }
         main_head.style.color = '#000000'
         overview.style.color = 'hsl(228, 12%, 44%)'
         for(var i=0;i<blocks.length;i++){

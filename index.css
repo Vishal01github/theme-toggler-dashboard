@@ -217,6 +217,9 @@ input:checked::after{
     height: 5px;
 }
 @media(max-width: 376px){
+    body{
+        background-image: linear-gradient(to bottom,hsl(225, 100%, 98%) 0%,hsl(225, 100%, 98%) 10%,white 10%,white 100%);
+    }
     .navbar{
         flex-direction: column;
         justify-content: space-around;
